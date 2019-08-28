@@ -2,18 +2,18 @@
   import logo from './logo.svg';
   import './App.css';
   import { Navbar, NavbarBrand } from'reactstrap';
-  import Menu from './components/MenuComponents'; 
-  import { DISHES } from './components/shared/dishes';
+  import Menu from './components/MenuComponents';
+  import { DISHES } from './shared/dishes';
 
 class App extends Component {
-//Construtor needed in order to store the state
-constructor(props) {
-super(props); 
+  constructor(props) {
+    super(props);
 
-this.state={
-  dishes: DISHES
-  };
-}
+    this.state={
+      dishes: DISHES
+    };
+  }
+
 
   render() {
     return (
@@ -23,7 +23,7 @@ this.state={
             <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
           </div>
         </Navbar>
-        <Menu dishes={this.state.dishes} />   
+        <Menu dishes={this.state.dishes} /> {/*dishes made available here*/}
       </div>
     );
   }
