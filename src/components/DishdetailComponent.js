@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
+
 
     function RenderDish({dish}) {
         return(
@@ -15,7 +17,9 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
         );
     }
 
+
     function RenderComments({comments}){
+
         if (comments != null){
             let comms = comments.map((comm, i) => {
                 let date = new Intl.DateTimeFormat('en-US', {
